@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Para Blaky - Nuestro Mundo de Sakura</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+<img id="bg" class="bg" src="bg.jpg" alt="Nuestro mundo de sakura">
+<canvas id="fx"></canvas>
+
+<main class="ui">
+  <header class="title">
+    <h1>PARA BLAKY</h1>
+    <p>MI MUNDO, MI PERSONA FAVORITA</p>
+  </header>
+
+  <div class="chip top"><span class="h">♥</span><span>Tú y yo…<br>Siempre en el mismo mundo</span></div>
+
+  <!-- Cofre del centro: al tocarlo se aplana y sale el libro -->
+  <div class="chest-wrap hot" id="chestWrap">
+    <div class="burst" id="burst"></div>
+    <canvas id="chest" width="24" height="20" aria-label="Cofre con la carta" role="button" tabindex="0"></canvas>
+  </div>
+
+  <div class="scrim hidden" id="scrim"></div>
+
+  <!-- Libro de Minecraft con la carta -->
+  <section class="book hot hidden" id="book" aria-label="Libro con la carta">
+    <button class="mc-btn close" id="closeBook">✕ Cerrar</button>
+    <div class="spreads">
+      <div class="spread" id="s1">
+        <div class="page l">
+          <h2>♥ Para Blaky,</h2>
+          <p>No importa cuántos chunks tenga que explorar, ni en qué coordenada me encuentre, mi punto de spawn siempre será a tu lado.</p>
+          <p>Eres el bioma más hermoso que he descubierto.</p>
+          <p class="hearts">♥</p>
+        </div>
+        <div class="page r">
+          <p>Saltaría a la lava por ti, te daría mi última manzana dorada y construiría un castillo de diamantes solo para verte sonreír.</p>
+          <p>Gracias por ser parte de este mundo y de todos los que vendrán. Eres mi mejor aventura.</p>
+          <p>Te amo infinitamente.</p>
+          <p class="sign">- Dina ♥</p>
+        </div>
+      </div>
+      <div class="spread hidden" id="s2">
+        <div class="page l">
+          <h2>♥ Querida Blaky:</h2>
+          <p>Hoy quise escribirte esta carta porque hay cosas que no caben en un chat ni en un cartel de Minecraft.</p>
+          <p>Contigo aprendí que el mejor tesoro no está en una mina de diamantes: está en tu risa, en tu voz y en cómo haces bonito hasta el día más gris.</p>
+          <p>Gracias por quedarte en mi mundo, incluso en las noches oscuras, cuando salen los creepers y todo parece difícil. Contigo siempre amanece.</p>
+        </div>
+        <div class="page r">
+          <p>Prometo cuidarte, hacerte reír y plantar un cerezo por cada recuerdo que hagamos juntos, hasta que todo nuestro bioma se llene de flores rosas.</p>
+          <p>Y si algún día te sientes lejos, mira por la ventana: los pétalos caen solo para ti.</p>
+          <p class="sign">Con todo mi amor,<br>Dina ♥</p>
+        </div>
+      </div>
+    </div>
+    <div class="bar">
+      <button class="mc-btn" id="prev">◀</button>
+      <span id="pgnum">1 / 2</span>
+      <button class="mc-btn" id="next">▶</button>
+    </div>
+  </section>
+
+  <nav class="nav hot">
+    <button id="n-home"><i>⌂</i>Inicio</button>
+    <button id="n-explore"><i>▲</i>Explorar</button>
+    <button id="n-world"><i>♥</i>Nuestro Mundo</button>
+    <button id="n-letter"><i>✉</i>Carta para Blaky</button>
+  </nav>
+
+  <div class="chip hint"><span class="h">♥</span><span>Toca el cofre para leer la carta</span></div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
